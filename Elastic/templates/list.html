@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Result Page {% endblock %}
+
+{% block content %}
+
+{% for articulo in articulos %}
+<h3 style="color: red; font-weight: bold;">TITULO: {{ articulo.title }}</h3>
+<h4>CONTENIDO: {{ articulo.contenido }}</h4>
+<hr width=100%  align="center" >
+
+</br></br>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Search Page {% endblock %}
+
+{% block content %}
+
+<form action="/search" method="POST">
+    <!--<p>Palabra: </p>
+    <input type="text" name="palabra"><br><br>
+
+    <input type="submit" value="Submit">-->
+
+    <li style="padding-bottom: 10px; padding-left: 250px" >
+        <label for="name">Buscar palabra: </label>
+    </li>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="palabra">
+
+    <div style="text-align:center; padding-top: 50px;">
+        <button>Buscar</button>
+    </div>
+</form> 
+
+{% endblock %}

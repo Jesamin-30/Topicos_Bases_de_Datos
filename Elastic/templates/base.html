@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            background-color:#DAF7F0;        
+        }        
+        
+        div.sphinxsidebarwrapper{
+            margin-left:10px;
+            padding: 5px 0 10px 0;
+        }
+        
+        div.related {
+            background-color:#5F95CE;
+            font-size: 1em;
+        }
+        
+        div.button {
+            /* Alinear los botones con los campos de texto */
+            padding-left: 300px; /* mismo tamaño que los elementos de la etiqueta */
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" >Sistema de Recuperación de Información con Elasticsearch</h1>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

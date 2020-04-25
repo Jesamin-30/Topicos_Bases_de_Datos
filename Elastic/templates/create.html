@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+
+<form action="/create" method="POST">
+    <li style="padding-bottom: 10px; padding-left: 250px" >
+        <label for="name">Título: </label>
+    </li>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="title">
+
+    <li style="padding-top: 10px; padding-bottom: 10px; padding-left: 250px; padding-top: 50px;" >
+        <label for="msg">Contenido: </label>
+    </li>
+    <textarea style="width:810px; height:335px; position:absolute; left:250px;" cols="50" rows="5" style="overflow:scroll;" name="contenido">
+    </textarea>
+
+    <div style="text-align:center; padding-top: 400px;">
+        <button>Indexar</button>
+    </div>
+
+    <!--<p>Contenido: </p>
+    <input type="text" name="contenido"><br><br>
+
+    <input type="submit" value="Submit">-->
+
+</form> 
+
+
+
+{% endblock %}
