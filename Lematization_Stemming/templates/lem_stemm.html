@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+
+{%block title%}Lematization y Stemming{%endblock%}
+
+{%block content%}
+
+<h1 align="center">Lematization y Stemming</h1>
+<form action="/lematization_stemming" method="POST">
+    <li style="padding-bottom: 10px; padding-left: 250px" >
+        <label for="frase">Ingrese frase: </label>
+    </li>
+<textarea style="width:810px; height:120px; position:absolute; left:250px;" cols="50" rows="5" style="overflow:scroll;" name="text">{{inicial}}</textarea>
+<div style="text-align:center; padding-top: 140px;">
+    <button name="action" value="lema" type="submit">Lematization</button>
+    <button name="action" value="stemm" type="submit">Stemming</button>
+</div>    
+
+    
+</form> 
+
+<li style="padding-top: 10px; padding-bottom: 10px; padding-left: 250px; padding-top: 50px;" >
+    <label for="msg">Nueva frase: </label>
+</li>
+<textarea style="width:810px; height:120px; position:absolute; left:250px;" cols="50" rows="5" style="overflow:scroll;" name="contenido">{{frase}}</textarea>
+{%endblock%}
