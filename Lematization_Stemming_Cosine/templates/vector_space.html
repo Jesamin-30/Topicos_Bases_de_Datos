@@ -1,0 +1,56 @@
+{%extends "base.html"%}
+
+{%block title%}Comparación de Vectores{%endblock%}
+
+{%block content%}
+
+<h1 align="center">Comparación de Vectores</h1>
+<form action="/vector_space" method="POST">
+<li style="padding-bottom: 10px; padding-left: 160px" >
+    <label for="vector">Vector 1: </label>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="0" value={{vect1}}>
+</li>
+
+<li style="padding-top: 40px; padding-bottom: 10px;padding-left: 160px" >
+    <label for="vector">Vector 2: </label>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="1" value={{vect2}}>
+</li>
+
+<li style="padding-top: 40px; padding-bottom: 10px;padding-left: 160px" >
+    <label for="vector">Vector 3: </label>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="2" value={{vect3}}>
+</li>
+
+<li style="padding-top: 40px; padding-bottom: 10px;padding-left: 160px" >
+    <label for="vector">Vector 4: </label>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="3" value={{vect4}}>
+</li>
+
+<li style="padding-top: 40px; padding-bottom: 10px;padding-left: 160px" >
+    <label for="vector">Vector 5: </label>
+    <input style="width:810px; height:25px; position:absolute; left:250px;" type="text" name="4" value={{vect5}}>
+</li>
+
+<div style="text-align:center; padding-top: 30px; padding-right: 20px;">
+    <select name="select">
+        <option value="0" selected>Vector 1</option>
+        <option value="1">Vector 2</option>
+        <option value="2">Vector 3</option>
+        <option value="3">Vector 4</option>
+        <option value="4">Vector 5</option>
+    </select>
+    <button name="action" value="comparar" type="submit">Comparar</button>
+</div>    
+
+    
+</form> 
+
+<li style="padding-top: 10px; padding-bottom: 10px; padding-left: 150px; padding-top: 20px;" >
+<label for="msg">Resultado: </label>
+<textarea style="width:810px; height:150px; position:absolute; left:250px;" cols="50" rows="5" style="overflow:scroll;" name="contenido">
+{% for i in lista %}
+{{i}}
+{% endfor %}
+</textarea>
+</li>
+{%endblock%}
