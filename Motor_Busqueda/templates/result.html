@@ -1,0 +1,27 @@
+{%extends "base.html"%}
+
+{%block content%}
+  <div class="container">
+    <h1 style="color: black;"> <b>RESULTADOS</b> </h1>
+    <h3 style="color: black;"> TIME: {{ tiempo }}</h3>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th style="color: black;" class="text-center">#</th>
+          <th style="color: black;" class="text-center">Palabra</th>
+          <th style="color: black;" class="text-center">Similitud</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in lista %}
+        <tr>
+          <td style="color: black;" >{{loop.index}}</td>
+          <td style="color: black;">{{i[0]}}</td>
+          <td style="color: black;">{{i[1]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{%endblock%}
